@@ -53,7 +53,13 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
 
     // Cấu hình Điều kiện 1: Loại Sản phẩm (Nhóm 1)
     await page.locator(".ant-input-number-input").nth(0).fill("2");
-    await page.locator(".ant-select").last().click();
+    await page.locator(".ant-select").nth(3).click();
+    await page
+      .locator(".ant-select-item-option:visible")
+      .filter({ hasText: /^Sản phẩm$/i })
+      .first()
+      .click();
+    await page.locator(".ant-select").nth(4).click();
     await page.locator(".ant-select-item-option:visible").first().click();
     await page.locator(".ant-input-number-input").nth(1).fill("10000");
 
@@ -62,29 +68,26 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
     await page.waitForTimeout(500);
 
     // Cấu hình Điều kiện 2: Combo sản phẩm (Nhóm 1)
-    await page.locator(".ant-select").nth(4).click();
-    const comboOption = page
-      .locator(".ant-select-item-option:visible")
-      .filter({ hasText: /Combo/i });
-    if ((await comboOption.count()) > 0) {
-      await comboOption.first().click();
-    } else {
-      await page.locator(".ant-select-item-option:visible").last().click();
-    }
     await page.locator(".ant-input-number-input").nth(2).fill("1");
-    await page.locator(".ant-select").last().click();
+    await page.locator(".ant-select").nth(5).click();
+    await page
+      .locator(".ant-select-item-option:visible")
+      .filter({ hasText: /^Combo sản phẩm$/i })
+      .first()
+      .click();
+    await page.locator(".ant-select").nth(6).click();
     await page.locator(".ant-select-item-option:visible").first().click();
     await page.locator(".ant-input-number-input").nth(3).fill("15000");
 
-    // Thao tác gây exception: Chuyển Điều kiện 1 (nth(2)) sang loại thuộc Nhóm 2 (ví dụ SKU hoặc Danh mục)
-    await page.locator(".ant-select").nth(2).click();
-    const skuOrCatOption = page
+    // Thao tác gây exception: Chuyển Điều kiện 1 (nth(3)) sang loại thuộc Nhóm 2 (ví dụ Sản phẩm trong danh mục hoặc SKU)
+    await page.locator(".ant-select").nth(3).click();
+    const catOption = page
       .locator(".ant-select-item-option:visible")
-      .filter({ hasText: /SKU|Danh mục/i });
-    if ((await skuOrCatOption.count()) > 0) {
-      await skuOrCatOption.first().click();
+      .filter({ hasText: /danh mục|SKU/i });
+    if ((await catOption.count()) > 0) {
+      await catOption.first().click();
     } else {
-      await page.locator(".ant-select-item-option:visible").nth(1).click();
+      await page.locator(".ant-select-item-option:visible").last().click();
     }
 
     // Kết quả mong muốn:
