@@ -1,115 +1,141 @@
 # VNPost UI Automation Testing Framework
 
-Dự án kiểm thử tự động (UI Automation Testing) cho website VNPost sử dụng **Playwright** và **TypeScript** theo mô hình **Page Object Model (POM)**.
+Dự án kiểm thử tự động (UI Automation Testing) cho hệ thống **VNPost** (bao gồm module Quản lý Sản phẩm, Chương trình Khuyến mãi CTKM, Loyalty, Xác thực người dùng, v.v.) sử dụng **Playwright** và **TypeScript** theo mô hình **Page Object Model (POM)**.
 
 ---
 
 ## 🚀 Tính Năng & Thiết Kế Framework
-- **Page Object Model (POM)**: Tách biệt hoàn toàn phần xử lý giao diện (locators & actions) và phần kịch bản kiểm thử (assertions & flows).
-- **Environment Management**: Quản lý thông tin nhạy cảm (Credentials, URL) qua file `.env` không commit lên Git.
-- **Smart Wait**: Sử dụng cơ chế auto-waiting mặc định và Web-First Assertions của Playwright giúp test chạy ổn định, hạn chế tối đa flaky tests.
-- **Traceable Test Data**: Tiện ích sinh dữ liệu tự động gắn nhãn rõ ràng theo cấu trúc để dễ dàng truy vết trong DB/Reports.
-- **Video & Screenshots**: Tự động chụp ảnh màn hình và quay video khi kịch bản test thất bại để phục vụ việc debug.
+
+- **Page Object Model (POM)**: Tách biệt hoàn toàn phần xử lý giao diện (locators & actions) và phần kịch bản kiểm thử (assertions & flows) để dễ dàng bảo trì.
+- **Environment Management**: Quản lý thông tin nhạy cảm (Tài khoản, Mật khẩu, URL) qua file `.env` được bảo mật cục bộ.
+- **Auto-waiting & Smart Locators**: Sử dụng cơ chế auto-waiting mặc định và Web-First Assertions của Playwright, kết hợp bắt các component ảo (Virtual DOM / Ant Design tree) linh hoạt, giúp test chạy ổn định, không bị flaky.
+- **Xử lý linh hoạt giao diện Ant Design**: Bao gồm cách tự động xử lý dropdown, date-picker, tree-select, và checkbox đa cấp phức tạp (như phần chọn Đơn vị Phạm vi áp dụng của CTKM).
+- **Video & Traces**: Tự động chụp ảnh màn hình, lưu vết (trace) và quay video khi kịch bản test thất bại nhằm mục đích gỡ lỗi (debug).
 
 ---
 
 ## 🛠️ Hướng Dẫn Thiết Lập (Setup)
 
 ### 1. Yêu cầu hệ thống
+
 - Cài đặt **Node.js** (Khuyến nghị phiên bản 18+).
 
 ### 2. Cài đặt các thư viện phụ thuộc
-Di chuyển vào thư mục dự án và chạy lệnh:
+
+Mở Terminal (hoặc Command Prompt) ở thư mục gốc dự án và chạy:
+
 ```bash
 npm install
 ```
 
+Sau đó cài đặt các trình duyệt Playwright cần thiết:
+
+```bash
+npx playwright install --with-deps
+```
+
 ### 3. Cấu hình môi trường (Environment Setup)
-Tạo file `.env` ở thư mục gốc của dự án (hoặc copy từ file `.env.example`):
+
+Tạo file `.env` ở thư mục gốc của dự án (hoặc sao chép từ file `.env.example` nếu có):
+
 ```bash
 cp .env.example .env
 ```
-Cập nhật nội dung trong file `.env` với các thông tin thực tế:
+
+Cập nhật nội dung trong file `.env` với thông tin tài khoản test của bạn:
+
 ```ini
 BASE_URL=https://vnpost.sfin.vn/
-TEST_USERNAME=0339940200
-TEST_PASSWORD=123456
+TEST_USERNAME=tên_đăng_nhập_của_bạn
+TEST_PASSWORD=mật_khẩu_của_bạn
 ```
 
 ---
 
 ## 🏃 Hướng Dẫn Chạy Kiểm Thử (Running Tests)
 
-### Chạy toàn bộ test suite ở chế độ headless (chạy ngầm)
+### Chạy toàn bộ test suite ở chế độ headless (chạy ngầm, không mở UI)
+
 ```bash
 npx playwright test
 ```
 
+### Chạy toàn bộ test suite và mở UI (Headed mode)
+
+```bash
+npx playwright test --headed
+```
+
+### Chạy một thư mục module cụ thể (ví dụ Module CTKM)
+
+```bash
+npx playwright test tests/ctkm/ --headed
+```
+
 ### Chạy một file test cụ thể
+
 ```bash
-npx playwright test tests/auth/login.spec.ts
+npx playwright test tests/ctkm/CTKM_5.spec.ts --headed
 ```
 
-### Chạy và xem giao diện trình duyệt trực tiếp (Headed mode)
-```bash
-npx playwright test tests/auth/login.spec.ts --headed
-```
+### Chạy chế độ giao diện tương tác trực quan (UI Mode - Khuyến nghị để Debug)
 
-### Chạy chế độ giao diện tương tác trực quan (UI Mode)
-Cho phép xem từng hành động chạy tự động, DOM snapshot, console log và network request trực tiếp trên UI:
-```bash
-npx playwright test tests/auth/login.spec.ts --ui
-```
+Chế độ này rất hữu ích, cho phép bạn xem dòng thời gian (timeline), DOM snapshot, console log và network request trực tiếp:
 
-### Chạy chế độ gỡ lỗi từng bước (Debug Mode)
-Mở công cụ **Playwright Inspector** để tạm dừng và bấm chạy qua từng dòng lệnh:
 ```bash
-npx playwright test tests/auth/login.spec.ts --headed --debug
-```
-
-### Chỉ chạy trên một trình duyệt cụ thể (ví dụ Google Chrome)
-```bash
-npx playwright test tests/auth/login.spec.ts --project=chromium
+npx playwright test --ui
 ```
 
 ### Xem báo cáo kết quả kiểm thử (HTML Report)
-Sau khi chạy xong test, sử dụng lệnh sau để mở báo cáo kết quả trên trình duyệt:
+
+Sau khi chạy xong, sử dụng lệnh sau để mở báo cáo tổng quan (có chứa video và ảnh chụp nếu test bị fail):
+
 ```bash
 npx playwright show-report
-```
-*Lưu ý: Nếu gặp lỗi trùng cổng (`EADDRINUSE`), hãy chỉ định cổng khác để chạy:*
-```bash
-npx playwright show-report --port 9325
 ```
 
 ---
 
-## 📁 Cấu Trúc Dự Án (Project Structure)
+## 📁 Cấu Trúc Dự Án Hiện Tại (Project Structure)
+
 ```
-playwright-demo/
-├── playwright.config.ts        # File cấu hình Playwright (baseURL, viewport, reporter...)
+vnpost-playwright/
+├── playwright.config.ts        # File cấu hình Playwright (baseURL, timeout, reporter...)
 ├── package.json                # Quản lý thư viện phụ thuộc và scripts
-├── .env.example                # Bản mẫu cấu hình môi trường
-├── .env                        # Chứa URL và tài khoản kiểm thử (được bỏ qua bởi git)
-├── .gitignore                  # Cấu hình bỏ qua các thư mục node_modules, reports, videos...
+├── .env                        # Chứa cấu hình môi trường, URL và tài khoản kiểm thử
+├── .gitignore                  # Bỏ qua các thư mục node_modules, test-results, report...
 ├── README.md                   # Tài liệu hướng dẫn này
 ├── src/
-│   ├── pages/                  # Thư mục lưu các lớp Page Objects
-│   │   ├── base.page.ts        # Chứa wrapper actions dùng chung
-│   │   ├── login.page.ts       # Page Object cho màn hình đăng nhập
-│   │   ├── select-shop.page.ts # Page Object cho màn hình chọn vai trò & điểm bán
-│   │   └── dashboard.page.ts   # Page Object cho trang Dashboard chính
-│   └── utils/                  # Thư mục chứa các module tiện ích
-│       ├── env.config.ts       # Đọc và định nghĩa kiểu dữ liệu cho biến môi trường
-│       └── test-data.ts        # Sinh dữ liệu ngẫu nhiên hỗ trợ test
-└── tests/                      # Thư mục chứa kịch bản kiểm thử (Test Specs)
-    └── auth/
-        └── login.spec.ts       # Kịch bản kiểm thử Đăng nhập & Đăng xuất
+│   ├── pages/                  # Thư mục lưu các lớp Page Objects (POM)
+│   │   ├── base.page.ts        # Các hàm tiện ích dùng chung
+│   │   ├── login.page.ts       # Xử lý luồng Đăng nhập
+│   │   └── select-shop.page.ts # Xử lý màn hình chọn vai trò & Đơn vị làm việc
+│   └── utils/                  # Các tiện ích bổ trợ
+└── tests/                      # Thư mục chứa toàn bộ kịch bản kiểm thử (Test Specs)
+    ├── auth/
+    │   └── login.spec.ts       # Kiểm thử Đăng nhập & Đăng xuất
+    ├── ctkm/                   # Kiểm thử Module Chương trình Khuyến mãi
+    │   ├── CTKM_5.spec.ts      # Tạo CTKM hợp lệ
+    │   ├── CTKM_6.spec.ts      # Tạo CTKM không ngày kết thúc
+    │   ├── CTKM_7.spec.ts      # Tạo CTKM không khung giờ
+    │   ├── CTKM_8.spec.ts      # Phạm vi áp dụng - Cấp Bưu điện Tỉnh
+    │   ├── CTKM_9.spec.ts      # Phạm vi áp dụng - Cấp Bưu điện Xã
+    │   └── CTKM_10.spec.ts     # Phạm vi áp dụng - Cấp Điểm bán
+    ├── product/                # Kiểm thử Module Quản lý Sản phẩm
+    │   ├── create-product-required.spec.ts
+    │   ├── edit-product-required.spec.ts
+    │   ├── add-product-variant.spec.ts
+    │   └── delete-product.spec.ts
+    └── ctrinh_Loyalty/         # Kiểm thử Module Loyalty (đang phát triển)
 ```
 
 ---
 
 ## 📌 Các Quy Tắc Chung (Conventions)
-1. **Locators**: Không hardcode các XPath/CSS selector dài và dễ vỡ. Hãy ưu tiên sử dụng các locator theo hướng người dùng như `getByRole()`, `getByLabel()`, `getByPlaceholder()`, `getByText()`.
-2. **Assertions**: Toàn bộ Assertions phải được đặt ở các file test (`*.spec.ts`), tuyệt đối không viết Assertion trong các file Page Objects (`*.page.ts`).
-3. **Smart Wait**: Tuyệt đối không sử dụng `page.waitForTimeout()` hoặc `setTimeout`. Hãy để Playwright tự động đợi thông qua các Web-First Assertions (`expect(locator).toBeVisible()`).
+
+1. **Locators**: Hạn chế hardcode XPath/CSS chọn lọc theo thứ tự tuyệt đối. Thay vào đó, hãy sử dụng các locator theo hướng người dùng như `getByRole()`, `getByLabel()`, `getByPlaceholder()`, hoặc kết hợp `.filter({ hasText: '...' })`.
+2. **Assertions**: Toàn bộ Assertions (`expect()`) phải được viết trong các file kịch bản test (`*.spec.ts`), tuyệt đối không được giấu bên trong file Page Object (`*.page.ts`).
+3. **Chờ đợi (Wait)**:
+    - Tuyệt đối không dùng `page.waitForTimeout()` trừ trường hợp bắt buộc phải giả lập độ trễ hệ thống (ví dụ: thao tác cuộn ảo - virtual scroll, API quá chậm không thể bắt tín hiệu).
+    - Ưu tiên dùng `await page.waitForSelector()` hoặc `await expect(locator).toBeVisible()` để bắt DOM trạng thái động.
+4. **Xử lý List/Table**: Luôn wait table row / list item xuất hiện bằng class thật (ví dụ `.ant-table-row`) trước khi count hoặc get text để tránh dính "Loading Skeleton" hay dòng "No Data".

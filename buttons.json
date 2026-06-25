@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Hủy",
+    "className": "ant-btn css-var-_r_3_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined",
+    "type": "button",
+    "html": "<button type=\"button\" class=\"ant-btn css-var-_r_3_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined\"><span>Hủy</span></button>"
+  },
+  {
+    "text": "Lưu nháp",
+    "className": "ant-btn css-var-_r_3_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined",
+    "type": "button",
+    "html": "<button type=\"button\" class=\"ant-btn css-var-_r_3_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined\"><span>Lưu nháp</span></button>"
+  },
+  {
+    "text": "Lưu",
+    "className": "ant-btn css-var-_r_3_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid btn-ok",
+    "type": "button",
+    "html": "<button type=\"button\" class=\"ant-btn css-var-_r_3_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid btn-ok\"><span>Lưu</span></button>"
+  },
+  {
+    "text": "",
+    "className": "ant-tabs-nav-more",
+    "type": "button",
+    "html": "<button type=\"button\" class=\"ant-tabs-nav-more\" aria-haspopup=\"listbox\" aria-controls=\"rc-tabs-0-more-popup\" id=\"rc-tabs-0-more\" aria-expanded=\"false\" style=\"visibility: hidden; order: 1;\"><span role=\"img\" aria-label=\"ellipsis\" class=\"anticon anticon-ellipsis\"><svg viewBox=\"64 64 896 896\" focusable=\"false\" data-icon=\"ellipsis\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z\"></path></svg></span></button>"
+  },
+  {
+    "text": "",
+    "className": "ant-input-clear-icon ant-input-clear-icon-hidden",
+    "type": "button",
+    "html": "<button type=\"button\" tabindex=\"-1\" class=\"ant-input-clear-icon ant-input-clear-icon-hidden\"><span role=\"img\" aria-label=\"close-circle\" class=\"anticon anticon-close-circle\"><svg fill-rule=\"evenodd\" viewBox=\"64 64 896 896\" focusable=\"false\" data-icon=\"close-circle\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z\"></path></svg></span></button>"
+  },
+  {
+    "text": "Thêm điều kiện khuyến mãi",
+    "className": "ant-btn css-var-_r_3_ ant-btn-link ant-btn-color-link ant-btn-variant-link text-[#52c41a] hover:text-[#73d13d]",
+    "type": "button",
+    "html": "<button type=\"button\" class=\"ant-btn css-var-_r_3_ ant-btn-link ant-btn-color-link ant-btn-variant-link text-[#52c41a] hover:text-[#73d13d]\"><span class=\"ant-btn-icon\"><span role=\"img\" aria-label=\"plus\" class=\"anticon anticon-plus\"><svg viewBox=\"64 64 896 896\" focusable=\"false\" data-icon=\"plus\" width=\"1em\" height=\"1em\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z\"></path><path d=\"M192 474h672q8 0 8 8v60q0 8-8 8H160q-8 0-8-8v-60q0-8 8-8z\"></path></svg></span></span><span>Thêm điều kiện khuyến mãi</span></button>"
+  }
+]

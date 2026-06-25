@@ -1,0 +1,4 @@
+Child 0: DIV class="rs-column__title px-3 pt-1 border-b border-gray-200 bg-gray-50 flex items-center gap-2.5"
+  - Checkboxes inside: 1
+Child 1: DIV class="px-3 pb-1"
+  - Checkboxes inside: 0

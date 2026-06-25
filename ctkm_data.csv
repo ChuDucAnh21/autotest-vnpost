@@ -1,0 +1,690 @@
+,Chức năng,,QUẢN LÝ ĐẶT HÀNG,,,,,,,
+,Mã Testcase,,CTKM,,,,,,,
+,Tổng các tình huống kiểm thử,,76,,,,,,,
+,Chưa thực hiện,,47,,,,,,,
+,Đạt yêu cầu,,22,,,,,,,
+,Không đạt yêu cầu,,7,,,,,,,
+,Thực hiện sau,,0,,,,,,,
+,Không phải thực hiện,,0,,,,,,,
+,,,,,,,,,,
+ID,Tình huống,Điều kiện cần có,Các bước thực hiện,"Ưu tiên
+(Cao/ TB/ Thấp)",Ứng dụng/ màn hình,Kết quả mong  muốn,Kết quả thực tế,Kết quả,Người thực hiện,Ngày thực hiện
+,KIỂM THỬ GIAO DIỆN,,,,,,,,,
+,Kiểm tra giao diện màn Danh sách CTKM,,,,,,,,,
+CTKM_1,Kiểm tra giao diện bảng danh sách CTKM,,Vào màn danh sách CTKM và quan sát,,,"Hiển thị lần lượt các cột
+1. STT
+2. Mã CTKM
+3. Tên CTKM
+4. Loại CTKM: dữ liệu cột hiển thị dạng tag
+5. Trạng thái: dữ liệu cột hiển thị dạng tag
+6. Đối tượng áp dụng
+7. Phạm vi áp dụng
+8. Thời gian hiệu lực
+9. Thao tác",Cột Loại khuyến mại chưa hiển thị dạng tag,Fail,Đức Anh,
+,Kiểm tra giao diện màn Tạo CTKM,,,,,,,,,
+CTKM_2,Chọn phạm vi áp dụng cấp Bưu điện tỉnh,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Vào tab Phạm vi áp dụng
+4. Chọn Áp dụng cho ""Bưu điện tỉnh"".
+5. Tích checkbox 1 vài tỉnh
+6. Nhấn ""Hiển thị các đơn vị đã chọn""",Trung bình,Thêm mới CTKM/Tab Phạm vi áp dụng,"- Hiển thị danh sách theo 1 cột (Cấp Tổng công ty / Cấp Tỉnh
+)
+- Khi tích 1 vài tỉnh, checkbox ở header hiển thị dạng indeterminate
+- Nhấn xem đơn vị đã chọn → hiển thị đúng tổng hợp các tỉnh đã chọn và checkbox ở header hiển thị dạng iactive
+","- Hiển thị danh sách theo 1 cột (Cấp Tổng công ty / Cấp Tỉnh
+)
+- Khi tích 1 vài tỉnh, checkbox ở header hiển thị dạng indeterminate
+- Nhấn xem đơn vị đã chọn → hiển thị đúng tổng hợp các tỉnh đã chọn và checkbox ở header hiển thị dạng iactive
+",Pass,,
+CTKM_3,Chọn phạm vi áp dụng cấp Bưu điện xã,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Vào tab Phạm vi áp dụng
+3. Chọn Áp dụng cho ""Bưu điện xã"".
+4. Nhấn vào 1 tỉnh
+5. Chọn 1 vài xã trong tỉnh
+6. Nhấn ""Hiển thị các đơn vị đã chọn""",,Thêm mới CTKM/Tab Phạm vi áp dụng,"- Hiển thị danh sách theo 2 cột (Cấp Tổng công ty / Cấp Tỉnh
++ Cấp Xã / Phường).
+- Khi tích 1 vài xã, checkbox ở header Cấp Xã/phường hiển thị dạng indeterminate), và tỉnh chứa xã đó cũng hiển thị dạng indeterminate
+- Nhấn xem đơn vị đã chọn → hiển thị đúng tổng hợp các tỉnh chứa các xã đã chọn, và các xã đã chọn trong tỉnh","- Hiển thị danh sách theo 2 cột (Cấp Tổng công ty / Cấp Tỉnh
++ Cấp Xã / Phường).
+- Khi tích 1 vài xã, checkbox ở header Cấp Xã/phường hiển thị dạng indeterminate), và tỉnh chứa xã đó cũng hiển thị dạng indeterminate
+- Nhấn xem đơn vị đã chọn → hiển thị đúng tổng hợp các tỉnh chứa các xã đã chọn, và các xã đã chọn trong tỉnh",,,
+CTKM_4,Chọn phạm vi áp dụng cấp điểm bán,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Vào tab Phạm vi áp dụng
+3. Chọn Áp dụng cho ""Bưu điện xã"".
+4. Nhấn vào 1 tỉnh
+5. Nhấn vào một xã
+6. Chọn vài điểm bán trong xã
+",,Thêm mới CTKM/Tab Phạm vi áp dụng,"- Hiển thị danh sách theo 3 cột (Cấp Tổng công ty / Cấp Tỉnh
++ Cấp Xã / Phường + Điểm bán).
+- Khi tích 1 vài điểm bán, checkbox ở header Điểm bán hiển thị dạng indeterminate), và xã / tỉnh chứa điểm bán đó cũng hiển thị dạng indeterminate
+- Nhấn xem đơn vị đã chọn → hiển thị đúng tổng hợp các tỉnh / xã chưa điểm bán đã chọn, và các điểm bán đã chọn","- Hiển thị danh sách theo 2 cột (Cấp Tổng công ty / Cấp Tỉnh
++ Cấp Xã / Phường).
+- Khi tích 1 vài xã, checkbox ở header Cấp Xã/phường hiển thị dạng indeterminate), và tỉnh chứa xã đó cũng hiển thị dạng indeterminate
+- Nhấn xem đơn vị đã chọn → hiển thị đúng tổng hợp các tỉnh chứa các xã đã chọn, và các xã đã chọn trong tỉnh",,,
+,KIỂM THỬ CHỨC NĂNG,,,,,,,,,
+,Kiểm tra chức năng Tạo CTKM,,,,,,,,,
+,Kiểm tra chức năng Tạo CTKM — Thông tin chung (Happy Cases),,,,,,,,,
+CTKM_5,Tạo CTKM thành công với đầy đủ thông tin hợp lệ,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình"".
+2. Nhập tên chương trình chưa tồn tại
+3. Chọn điều kiện áp dụng
+4. Chọn đối tượng áp dụng
+5. Nhập thông tin mô tả
+6. Nhập ngày bắt đầu hợp lệ: Hôm nay
+7. Không tích ""Không cài đặt ngày kết thúc"" → nhập ngày kết thúc > ngày bắt đầu
+8. Không tích ""Không cài đặt khung giờ"" → nhập giờ kết thúc > giờ bắt đầu
+9. Chọn phân loại khuyến mãi
+10. Khai báo phân loại hợp lệ
+11. Chọn ít nhất 1 phạm vi áp dụng
+12. Nhấn ""Lưu"".",Cao,Thêm mới CTKM,"- Hệ thống lưu thành công, điều hướng về màn hình danh sách.
+- CTKM hiển thị trong danh sách với trạng thái Đang diễn ra.
+- Mã chương trình đúng format CTKMyymmddOOOO.
+- Toast/thông báo thành công xuất hiện.","- Hệ thống lưu thành công, điều hướng về màn hình danh sách.
+- CTKM hiển thị trong danh sách với trạng thái Đang diễn ra.
+- Mã chương trình đúng format CTKMyymmddOOOO.
+- Toast/thông báo thành công xuất hiện.",Pass,,
+CTKM_6,"Tạo CTKM bật checkbox ""Không cài đặt ngày kết thúc""",Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình"".
+2. Nhập tên chương trình chưa tồn tại
+3. Nhập ngày bắt đầu hợp lệ: Hôm nay
+4. Tích checkbox ""Không cài đặt ngày kết thúc"" 
+5. Quan sát trường ""Ngày kết thúc"".
+6. Không tích ""Không cài đặt khung giờ"" → nhập giờ kết thúc > giờ bắt đầu
+7. Chọn phân loại khuyến mãi
+8. Khai báo phân loại hợp lệ
+9. Chọn ít nhất 1 phạm vi áp dụng
+10. Nhấn ""Lưu"".",Cao,Thêm mới CTKM,"- Trường ""Ngày kết thúc"" chuyển sang disabled, không bắt buộc.
+- Lưu thành công không yêu cầu nhập ngày kết thúc.
+- CTKM không có ngày kết thúc, chạy vô thời hạn cho đến khi dừng thủ công.","- Trường ""Ngày kết thúc"" chuyển sang disabled, không bắt buộc.
+- Lưu thành công không yêu cầu nhập ngày kết thúc.
+- CTKM không có ngày kết thúc, chạy vô thời hạn cho đến khi dừng thủ công.",Pass,,
+CTKM_7,"Tạo CTKM không tích checkbox ""Không cài đặt khung giờ""",Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình"".
+2. Nhập tên chương trình chưa tồn tại
+3. Nhập ngày bắt đầu hợp lệ: Hôm nay
+4. Tích checkbox ""Không cài đặt ngày kết thúc""
+5. Mặc định không tích checkbox ""Không cài đặt khung giờ""
+6. Nhập giờ bắt đầu: 08:00 < giờ kết thúc: 20:00.
+7. Nhấn ""Lưu"".
+8. Chọn phân loại khuyến mãi
+9. Khai báo phân loại hợp lệ
+10. Chọn ít nhất 1 phạm vi áp dụng
+11. Nhấn ""Lưu"".",Trung bình,Thêm mới CTKM,"- Khi active: Giờ bắt đầu/kết thúc cho phép nhập.
+- Lưu thành công, CTKM chỉ áp dụng trong khung giờ 08:00–20:00 mỗi ngày.","- Khi active: Giờ bắt đầu/kết thúc cho phép nhập.
+- Lưu thành công, CTKM chỉ áp dụng trong khung giờ 08:00–20:00 mỗi ngày.",Pass,,
+CTKM_8,Chọn phạm vi áp dụng cấp Bưu điện tỉnh,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Nhập tên chương trình chưa tồn tại
+3. Nhập ngày bắt đầu hợp lệ: Hôm nay
+4. Tích checkbox ""Không cài đặt ngày kết thúc""
+5. Tích checkbox ""Không cài đặt khung giờ""
+8. Chọn phân loại khuyến mãi
+9. Khai báo phân loại hợp lệ
+10. Tại tab Phạm vi áp dụng, chọn Áp dụng cho ""Bưu điện tỉnh"".
+11. Tích checkbox một tỉnh (VD: Bắc Kạn)
+12. Nhấn ""Lưu""",Trung bình,Thêm mới CTKM/Tab Phạm vi áp dụng,"- Toast/thông báo thành công xuất hiện.
+- Hệ thống lưu thành công, điều hướng về màn hình danh sách.
+- Cột Phạm vi áp dụng hiển thị ""n Tỉnh/thành phố"". Trong đó n là số lượng tỉnh được chọn ",,,,
+CTKM_9,Chọn phạm vi áp dụng cấp Bưu điện xã,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Nhập tên chương trình chưa tồn tại
+3. Nhập ngày bắt đầu hợp lệ: Hôm nay
+4. Tích checkbox ""Không cài đặt ngày kết thúc""
+5. Tích checkbox ""Không cài đặt khung giờ""
+8. Chọn phân loại khuyến mãi
+9. Khai báo phân loại hợp lệ
+10. Tại tab Phạm vi áp dụng, chọn Áp dụng cho ""Bưu điện xã"".
+11. Nhấn vào một tỉnh (VD: Bắc Kạn)
+12. Chọn các xã trong tỉnh
+13. Nhấn ""Lưu""",,Thêm mới CTKM/Tab Phạm vi áp dụng,"- Toast/thông báo thành công xuất hiện.
+- Hệ thống lưu thành công, điều hướng về màn hình danh sách.
+- Cột Phạm vi áp dụng hiển thị ""n Xã/phường"". Trong đó n là số lượng xã được chọn ",,,,
+CTKM_10,Chọn phạm vi áp dụng cấp Điểm bán,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Nhập tên chương trình chưa tồn tại
+3. Nhập ngày bắt đầu hợp lệ: Hôm nay
+4. Tích checkbox ""Không cài đặt ngày kết thúc""
+5. Tích checkbox ""Không cài đặt khung giờ""
+8. Chọn phân loại khuyến mãi
+9. Khai báo phân loại hợp lệ
+10. Tại tab Phạm vi áp dụng, chọn Áp dụng cho ""Bưu điện xã"".
+11. Nhấn vào một tỉnh (VD: Bắc Kạn)
+12. Nhấn vào một xã
+13. Chọn vài điểm bán trong xã
+14. Nhấn ""Lưu""",Trung bình,Thêm mới CTKM/Tab Phạm vi áp dụng,"- Toast/thông báo thành công xuất hiện.
+- Hệ thống lưu thành công, điều hướng về màn hình danh sách.
+- Cột Phạm vi áp dụng hiển thị ""n điểm bán"". Trong đó n là số lượng điểm bán đã được chọn ",,,,
+,Kiểm tra chức năng Tạo CTKM — Exception / Validation Cases,,,,,,,,,
+CTKM_11,Lưu CTKM khi bỏ trống các trường bắt buộc,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Bỏ trống trường bắt buộc
+3. Điền đầy đủ các trường bắt buộc còn lại.
+4. Nhấn ""Lưu"".",Cao,Thêm mới CTKM,"- Hệ thống hiển thị message ""Vui lòng kiểm tra lại thông tin""
+- Không lưu được CTKM.
+- Focus đỏ và hiển thị message tại các trường bị lỗi.","- Hệ thống hiển thị message ""Vui lòng kiểm tra lại thông tin""
+- Không lưu được CTKM.
+- Focus đỏ và hiển thị message tại các trường bị lỗi.",Pass,,
+CTKM_12,Lưu CTKM khi tên trùng với chương trình đã tồn tại,"Đã đăng nhập với vai trò Admin
+Đã có ít nhất 1 CTKM trong hệ thống.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+1. Nhấn ""Thêm mới chương trình""
+2. Nhập tên CTKM đã tồn tại trong hệ thống
+3. Nhập ngày bắt đầu hợp lệ: Hôm nay
+4. Tích checkbox ""Không cài đặt ngày kết thúc""
+5. Tích checkbox ""Không cài đặt khung giờ""
+8. Chọn phân loại khuyến mãi
+9. Khai báo phân loại hợp lệ
+10. Chọn ít nhất một phạm vi áp dụng
+14. Nhấn ""Lưu""",Cao,Thêm mới CTKM,"- Hệ thống hiển thị thông báo lỗi: Tên chương trình đã tồn tại.
+- Không lưu được CTKM.","- Hệ thống hiển thị thông báo lỗi: Tên chương trình đã tồn tại.
+- Không lưu được CTKM.",Pass,,
+CTKM_13,Lưu CTKM khi ngày kết thúc trước ngày bắt đầu,"Đã đăng nhập với vai trò Admin
+Ở màn hình Thêm mới CTKM, checkbox ""Không cài đặt ngày kết thúc"" inactive.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Nhập tên CTKM chưa tồn tại trong hệ thống
+4. Nhập ngày bắt đầu: 20/06/2026.
+5. Nhập ngày kết thúc: 10/06/2026 (trước ngày bắt đầu)
+6. Tích checkbox ""Không cài đặt khung giờ""
+7. Chọn phân loại khuyến mãi
+8. Khai báo phân loại hợp lệ
+9. Chọn ít nhất một phạm vi áp dụng
+10. Nhấn ""Lưu""",Cao,Thêm mới CTKM,"- Hệ thống hiển thị message lỗi tại 2 trường Ngày bắt đầu và Ngày kết thúc
+- Hiển thị toast message Vui lòng kiểm tra lại thông tin
+- Không lưu được CTKM.",Hệ thống chỉ hiển thị message lỗi tại trường Ngày kết thúc. Sau khi ấn lưu mới hiển thị message ở cả 2 trường,Fail,Đức Anh,
+CTKM_14,Lưu CTKM khi giờ kết thúc trước giờ bắt đầu,"Đã đăng nhập với vai trò Admin
+Ở màn hình Thêm mới CTKM, checkbox ""Không cài đặt khung giờ"" inactive.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình"". 
+3. Nhập tên CTKM chưa tồn tại trong hệ thống
+4. Nhập ngày bắt đầu: 20/06/2026.
+5. Tích checkbox “Không cài đặt ngày kết thúc”
+6. Nhập giờ bắt đầu: 15:00
+7. Nhập giờ kết thúc trước giờ bắt đầu: 6:00
+8. Chọn phân loại khuyến mãi
+9. Khai báo phân loại hợp lệ
+10. Chọn ít nhất một phạm vi áp dụng
+11. Nhấn ""Lưu"" ",Cao,Thêm mới CTKM,"- Hệ thống hiển thị message lỗi tại 2 trường Giờ bắt đầu và Giờ kết thúc
+- Hiển thị toast message Vui lòng kiểm tra lại thông tin
+- Không lưu được CTKM.",Hệ thống cho phép lưu thành công,Fail,Đức Anh,
+CTKM_15,Lưu CTKM khi không chọn phạm vi áp dụng,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Nhập tên chương trình chưa tồn tại
+4. Nhập ngày bắt đầu hợp lệ: Hôm nay
+5. Tích checkbox ""Không cài đặt ngày kết thúc""
+6. Tích checkbox ""Không cài đặt khung giờ""
+7. Chọn phân loại khuyến mãi
+8. Khai báo phân loại hợp lệ
+9. Không chọn phạm vi áp dụng
+10. Nhấn ""Lưu""",,Thêm mới CTKM,"- Hiển thị toast message Vui lòng chọn ít nhất một phạm vi áp dụng
+- Không lưu được CTKM.",,Pass,,
+CTKM_16,Kiểm tra quy tắc ngăn trùng lặp dòng điều kiện,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn 1 trong 3 hình thức khuyến mại: Giảm giá bán / Tặng kèm sản phẩm khác / Được mua sản phẩm bất kỳ giá thấp
+7. Cấu hình Điều kiện 1: Mua từ 2 sản phẩm A.
+8. Click nút ""Thêm điều kiện khuyến mãi"" để tạo Điều kiện 2.
+9. Điều kiện 2 cấu hình giống hệt: Mua từ 2 sản phẩm A.
+10. Nhấn ""Lưu"".",,,"Hệ thống báo lỗi đỏ: ""Không được trùng sản phẩm/danh mục và số lượng trong điều kiện"" tại cả hai dòng và không cho phép lưu.",,Pass,,
+CTKM_17,Thêm dòng điều kiện bậc thang và lưu thành công,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán
+7. Dòng điều kiện 1: Mua từ 5 sản phẩm A -> Giảm 10,000đ.
+8. Click ""Thêm điều kiện khuyến mãi"" tạo dòng 2: Mua từ 10 sản phẩm A -> Giảm 25,000đ.
+9. Nhấn ""Lưu"".",,,"Cập nhật thành công. POS tính đúng giảm giá 10k nếu mua từ 5-9 SP, giảm giá 25k nếu mua từ 10 SP trở lên.",,Pass,,
+CTKM_18,Thêm nhiều điều kiện khuyến mãi — cùng nhóm (Sản phẩm + Combo),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn 1 trong 3 hình thức khuyến mại: Giảm giá bán / Tặng kèm sản phẩm khác / Được mua sản phẩm bất kỳ giá thấp
+7. Khai báo đầy đủ 1 điều kiện loại ""Sản phẩm""
+8. Nhấn ""+ Thêm điều kiện khuyến mãi"".
+9. Thêm điều kiện thứ 2 loại ""Combo sản phẩm"" và khai báo
+10. Nhấn ""Lưu"".",Trung bình,,- Cho phép thêm thành công vì cùng nhóm 1 (Sản phẩm + Combo).,,Pass,,
+CTKM_19,Exception: Khai báo điều kiện nhóm khác (Nhóm 1 + Nhóm 2),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn 1 trong 3 hình thức khuyến mại: Giảm giá bán / Tặng kèm sản phẩm khác / Được mua sản phẩm bất kỳ giá thấp
+7. Khai báo dòng điều kiện 1 loại ""Sản phẩm""
+8. Khai báo dòng điều kiện 2 loại ""Combo sản phẩm""
+9. Tại dòng điều kiện 1, chuyển loại từ ""Sản phẩm"" sang ""Sản phẩm trong danh mục"".
+10. Quan sát dòng điều kiện 2.",,,"- Hệ thống không cho phép tồn tại đồng thời điều kiện Nhóm 1 và Nhóm 2.
+- Khi thay đổi sang nhóm khác: hệ thống tự động đồng bộ giá trị ""Mua từ"" của các điều kiện trước theo giá trị điều kiện được chỉnh sửa gần nhất.
+- Hiển thị thông báo xác nhận thay đổi nhóm.",,Pass,,
+,Kiểm tra chức năng Tạo CTKM - Phân loại theo sản phẩm — Giảm giá bán,,,,,,,,,
+,Sản phẩm/Combo,,,,,,,,,
+CTKM_20,Khai báo giảm giá bán theo sản phẩm cụ thể (giảm VND),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán 
+7. Tại Điều kiện 1: Mua từ 2 - chọn loại ""Sản phẩm"" - chọn sản phẩm A.
+8.Ô ""Được giảm giá mỗi SP"" chọn VND và nhập 10,000.
+9. Nhấn ""Lưu""",Cao,Phân loại KM – Giảm giá bán,"1. Hiển thị toast messge ""Thêm mới chương trình thành công""
+2. Ghi nhận 1 bản ghi ngoài danh sách với cột phân loại là Sản phẩm
+3. Khách mua ≥ 2 sản phẩm A sẽ được giảm giá 10,000đ/sản phẩm A",,Pass,,
+CTKM_21,Khai báo giảm giá bán theo sản phẩm cụ thể (giảm %),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán 
+7.  Điều kiện 1: Mua từ 3 - chọn loại ""Sản phẩm"" - chọn sản phẩm A.
+8. Ô ""Được giảm giá mỗi SP"" chọn % và nhập 15
+9. Nhấn ""Lưu"".",Cao,Phân loại KM – Giảm giá bán,"1. Hiển thị toast messge ""Thêm mới chương trình thành công""
+2. Ghi nhận 1 bản ghi ngoài danh sách với cột phân loại là Sản phẩm
+3. Khách mua ≥ 3 sản phẩm A sẽ được giảm giá 15% trên từng sản phẩm A.",,Pass,,
+CTKM_22,Khai báo giảm giá bán theo combo cụ thể (giảm VND),"Đã đăng nhập với vai trò Admin
+Đã có combo trong hệ thống","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán
+7. Tại Điều kiện 1: Mua từ 2 - chọn loại ""Combo sản phẩm"" - chọn combo A.
+8.Ô ""Được giảm giá mỗi SP"" chọn VND và nhập 10,000.
+9. Nhấn ""Lưu""",Cao,Phân loại KM – Giảm giá bán,"1. Hiển thị toast messge ""Thêm mới chương trình thành công""
+2. Ghi nhận 1 bản ghi ngoài danh sách với cột phân loại là Sản phẩm
+3. Mua combo số lượng từ 2 trở lên được giảm 10k cho mỗi sản phẩm",Bug màn POS,Fail,,
+CTKM_23,Khai báo giảm giá bán theo combo cụ thể (giảm %),"Đã đăng nhập với vai trò Admin
+Đã có combo trong hệ thống","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán
+7.  Điều kiện 1: Mua từ 3 - chọn loại ""Combo sản phẩm"" - chọn combo B.
+8. Ô ""Được giảm giá mỗi SP"" chọn % và nhập 2
+9. Nhấn ""Lưu"".",Cao,Phân loại KM – Giảm giá bán,"1. Hiển thị toast messge ""Thêm mới chương trình thành công""
+2. Ghi nhận 1 bản ghi ngoài danh sách với cột phân loại là Sản phẩm
+3. Mua combo số lượng từ 3 trở lên được giảm 2% cho mỗi sản phẩm",Bug màn POS,Fail,,
+,Sản phẩm trong danh mục,,,,,,,,,
+CTKM_24,Khai báo giảm giá bán theo sản phẩm trong danh mục sản phẩm,"Đã đăng nhập với vai trò Admin
+Đã có danh mục sản phẩm trong hệ thống.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán
+7. Điều kiện 1: Mua từ 2 - click chọn dropdown loại = ""Sản phẩm trong danh mục"".
+8. Dropdown list chọn danh mục mặc định giá trị ""Danh mục sản phẩm"". Chọn 1 danh mục
+9. Nhập mức giảm giá mỗi SP = 5,000 VND.
+10. Nhấn ""Lưu"".",Cao,Phân loại KM – Giảm giá bán,"1. Hiển thị toast messge ""Thêm mới chương trình thành công""
+2. Ghi nhận 1 bản ghi ngoài danh sách với cột phân loại là Danh mục
+3. Khi khách hàng mua bất kỳ sản phẩm nào thuộc danh mục được chọn (nếu danh mục đó là cấp nhỏ nhất trong cây danh mục) hoặc mua sản phẩm trong danh mục con cấp nhỏ nhất của danh mục được chọn (nếu danh mục đó là cấp cha) với tổng số lượng đạt từ 2 trở lên, mỗi sản phẩm đó được giảm 5,000đ.",,Pass,,
+CTKM_25,Khai báo giảm giá bán theo combo trong danh mục combo,"Đã đăng nhập với vai trò Admin
+Đã có danh mục combo trong hệ thống.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Giảm giá bán 
+7. Điều kiện 1: Mua từ 2 - click chọn dropdown loại = ""Sản phẩm trong danh mục"".
+8. Dropdown list chọn danh mục mặc định giá trị ""Danh mục sản phẩm"". Đổi thành giá trị ""Danh mục combo"" và chọn 1 danh mục
+9. Nhập mức giảm giá mỗi SP = 5,000 VND.
+10. Nhấn ""Lưu"".",,Phân loại KM – Giảm giá bán,"1. Hiển thị toast messge ""Thêm mới chương trình thành công""
+2. Ghi nhận 1 bản ghi ngoài danh sách với cột phân loại là Danh mục
+3. Khi khách hàng mua bất kỳ combo nào thuộc danh mục được chọn (nếu danh mục đó là cấp nhỏ nhất trong cây danh mục) hoặc mua combo trong danh mục con cấp nhỏ nhất của danh mục được chọn (nếu danh mục đó là cấp cha) với tổng số lượng đạt từ 2 trở lên, mỗi sản phẩm đó được giảm 5,000đ.",,,,
+,Kiểm tra chức năng Tạo CTKM Phân loại theo sản phẩm — Tặng kèm sản phẩm khác,,,,,,,,,
+,Sản phẩm/Combo,,,,,,,,,
+CTKM_26,Tạo KM sản phẩm tặng kèm quà tặng (Cố định),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Điều kiện 1: Mua từ 2 sản phẩm A.
+8. Chọn Được tặng kèm = ""Sản phẩm"".
+9. Trong bảng ""Danh sách sản phẩm tặng kèm"", thêm sản phẩm B, số lượng = 1.
+10. Không tích ""Số lượng sản phẩm giảm giá nhân theo số lượng sản phẩm mua"".
+11. Nhấn ""Lưu""",,,"Lưu thành công. Khi mua 2 hay nhiều sản phẩm A (ví dụ mua 4), khách hàng chỉ nhận được cố định 1 quà tặng B.",,,,
+CTKM_27,Tạo KM sản phẩm tặng kèm quà tặng (Nhân số lượng quà),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Điều kiện 1: Mua từ 2 sản phẩm A.
+8. Chọn Được tặng kèm = ""Sản phẩm"".
+9. Trong bảng ""Danh sách sản phẩm tặng kèm"", thêm sản phẩm quà tặng B, số lượng = 1.
+10. Tích ""Số lượng sản phẩm giảm giá nhân theo số lượng sản phẩm mua"".
+11. Nhấn ""Lưu""",,,"Lưu thành công. Khi khách mua 4 sản phẩm A, hệ thống sẽ nhân số lượng quà tặng B tương ứng lên thành 2 quà tặng B.",,,,
+CTKM_28,Tạo KM sản phẩm tặng kèm sản phẩm trong danh mục (Không số lượng quà),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Điều kiện 1: Mua từ 2 sản phẩm A.
+8. Chọn Được tặng kèm = ""Sản phẩm trong danh mục"".
+9. Trong bảng Danh sách sản phẩm tặng kèm, mặc định giá trị ""Danh mục sản phẩm"". Thêm 1 danh mục, số lượng = 2.
+10. Không tích ""Số lượng sản phẩm giảm giá nhân theo số lượng sản phẩm mua"".
+11. Nhấn ""Lưu""",,,"Lưu thành công. Khi mua 2 hay nhiều sản phẩm A (ví dụ mua 4), khách hàng chỉ nhận được cố định tổng 2 sản phẩm thuộc tất cả danh mục cấp nhỏ nhất của danh mục đã chọn",,,,
+CTKM_29,Tạo KM sản phẩm tặng kèm sản phẩm trong danh mục (Nhân số lượng quà),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+1. Điều kiện 1: Mua từ 2 combo A.
+2. Chọn Được tặng kèm = ""Sản phẩm trong danh mục"".
+9. Trong bảng Danh sách sản phẩm tặng kèm, mặc định giá trị ""Danh mục sản phẩm"". Đổi thành giá trị ""Danh mục combo"" và thêm 1 danh mục, số lượng = 2.
+4. Tích ""Số lượng sản phẩm giảm giá nhân theo số lượng sản phẩm mua"".
+5. Nhấn ""Lưu""",,,"Lưu thành công. Khi khách mua 4 sản phẩm A, hệ thống sẽ nhân tổng số lượng tương ứng lên thành 4 sản phẩm được tặng (sản phẩm thuộc tất cả các danh mục cấp nhỏ nhất của danh mục đã chọn)",,,,
+CTKM_30,Tặng kèm theo danh mục — chọn danh mục cấp con rồi chọn danh mục cấp cha,"Đã đăng nhập với vai trò Admin
+Đã có cấu trúc danh mục: Thực phẩm > Đồ uống > Nước giải khát.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Phần ""Được tặng kèm"": chọn ""Sản phẩm trong danh mục"".
+8. Thêm danh mục ""Nước giải khát"" (cấp con) vào bảng.
+9. Tiếp tục thêm danh mục ""Đồ uống"" (cấp cha chứa Nước giải khát).",Trung bình,Phân loại KM – Tặng kèm,"- Sau bước 3: hệ thống tự động thay thế ""Nước giải khát"" bằng ""Đồ uống"".
+- Bảng chỉ còn ""Đồ uống"", không có ""Nước giải khát"" riêng lẻ.",,,,
+CTKM_31,Tặng kèm theo danh mục — chọn cấp cha trước rồi chọn cấp con,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Phần ""Được tặng kèm"": chọn ""Sản phẩm trong danh mục"".
+8. Thêm danh mục ""Đồ uống"" (cấp con) vào bảng.
+2. Thêm tiếp danh mục ""Nước giải khát"" (cấp con thuộc Đồ uống).",Trung bình,Phân loại KM – Tặng kèm,"- Hệ thống hiển thị thông báo: ""Đã có danh mục sản phẩm cấp lớn hơn"".
+- Không thêm danh mục con vào bảng.",,,,
+CTKM_32,Exception: Thêm trùng sản phẩm vào bảng quà tặng,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Thêm SP A vào bảng quà tặng.
+8. Thêm lại SP A vào bảng
+9. Quan sát thông báo.",Cao,Phân loại KM – Tặng kèm,"- Hệ thống hiển thị thông báo: ""Sản phẩm đã có trong bảng"".
+- Không thêm trùng vào bảng.",,Pass,,
+CTKM_33,Exception: Thêm trùng danh mục vào bảng quà tặng,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Phần ""Được tặng kèm"": chọn ""Sản phẩm trong danh mục"".
+8. Thêm danh mục ""Nước giải khát"" vào bảng.
+9. Thêm lại danh mục ""Nước giải khát"" vào bảng.
+10. Quan sát thông báo.",Cao,Phân loại KM – Tặng kèm,"- Hệ thống hiển thị thông báo: ""Trùng danh mục sản phẩm"".
+- Không thêm trùng vào bảng.",,Pass,,
+,Danh mục sản phẩm,,,,,,,,,
+CTKM_34,Tạo KM mua sản phẩm thuộc danh mục tặng kèm quà tặng theo Danh mục,Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Tặng kèm sản phẩm khác
+7. Điều kiện 1: Mua từ 10 sản phẩm trong danh mục ""DM_A_1"".
+8. Chọn Được tặng kèm = ""Sản phẩm trong danh mục"".
+9. Bảng ""Danh sách sản phẩm tặng kèm"", chọn danh mục ""DM_B_1"", số lượng = 3.
+10. Nhấn ""Lưu"".",,,Lưu thành công. Khách mua từ 3 sản phẩm trong danh mục DM_A_1 sẽ được tặng 3 sản phẩm bất kỳ nằm trong danh mục DM_B_1 (nếu là cấp nhỏ nhất) hoặc trong danh mục con cấp nhỏ nhất của DM_B_1 (nếu là cấp cha)        ,,,,
+,Kiểm tra chức năng Tạo CTKM Phân loại theo sản phẩm — Được mua sản phẩm bất kỳ giá thấp,,,,,,,,,
+,Sản phẩm/combo,,,,,,,,,
+CTKM_35,Khai báo được mua SP bất kỳ giá thấp(không nhân theo số lượng),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Được mua sản phẩm bất kỳ giá thấp
+7. Điều kiện 1: Mua từ 1 sản phẩm chính A.
+8. Được mua = ""Sản phẩm bất kỳ giá thấp"".
+9. Bảng ""Danh sách sản phẩm khác được mua kèm
+"", chọn sản phẩm phụ B, mức giảm giá = 20,000 VND.
+10. Nhấn ""Lưu"".",,,"Lưu thành công. Khi giỏ hàng có sản phẩm A và áp dụng CTKM, tự fill sản phẩm B với mức giá giảm 20,000đ.",,,,
+CTKM_36,Khai báo được mua SP bất kỳ giá thấp (nhân theo số lượng),Đã đăng nhập với vai trò Admin,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Được mua sản phẩm bất kỳ giá thấp
+7. Điều kiện 1: Mua từ 2 sản phẩm chính A.
+8. Được mua = ""Sản phẩm bất kỳ giá thấp""
+9. Tích checkbox ""Số lượng sản phẩm giảm giá nhân theo số lượng sản phẩm mua"".
+10. Bảng ""Danh sách sản phẩm khác được mua kèm"", chọn sản phẩm phụ B, mức giảm giá = 20,000 VND.
+11. Nhấn ""Lưu"".",,,"Lưu thành công. Khách mua từ 2 sản phẩm A, tự động áp dụng CTKM và fill sản phẩm B với mức giá giảm giá 20,000đ
+Mua 4 SP A = 2 lần đạt điều kiện → được mua 2 SP B giảm giá.",,,,
+,Danh mục sản phẩm,,,,,,,,,
+CTKM_37,Tạo KM mua sản phẩm danh mục được mua kèm sản phẩm thuộc danh mục khác giá thấp,Đã đăng nhập với vai trò Admin.,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo sản phẩm
+6. Chọn hình thức khuyến mại: Được mua sản phẩm bất kỳ giá thấp
+7. Điều kiện 1: Mua từ 6 sản phẩm danh mục ""DM_A_1"".
+8. Được mua = ""Sản phẩm bất kỳ trong danh mục giá thấp"".
+9. Bảng :Danh sách sản phẩm khác được mua kèm"", chọn danh mục mua kèm ""DM_B_1"", chọn mức giảm giá = 4,000đ
+10. Nhấn ""Lưu"".",,,"Lưu thành công. Khách mua từ 6 sản phẩm trong danh mục DM_A_1 sẽ được giảm giá 4,000đ cho 1 sản phẩm thuộc danh mục DM_B_1 hoặc cấp con nhỏ nhất (nếu danh mục được chọn là cấp cha)",,,,
+,Kiểm tra chức năng Tạo CTKM Phân loại theo đơn hàng,,,,,,,,,
+CTKM_38,Khai báo KM theo đơn hàng — giảm theo % hóa đơn,"Đã đăng nhập với vai trò Admin.
+","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo đơn hàng
+6. Chọn hình thức Theo % hóa đơn
+7. Nhập tỷ lệ: 10%.
+8. Không tích checkbox ""Tính trên giá trị sau KM khác"".
+9. Không tích checkbox ""Áp dụng quà tặng"".
+10. Nhấn Lưu",Cao,Phân loại KM – Theo đơn hàng,"Khai báo thành công và ghi nhận 1 bản ghi ngoài danh sách, cột Phân loại CTKM hiển thị Theo hóa đơn
+",,Pass,,
+CTKM_39,Validate giá trị giảm % vượt quá 100%,"Đã đăng nhập với vai trò Admin.
+","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Chọn phân loại khuyến mại: Theo đơn hàng
+4. Chọn đơn vị giảm giá = ""Theo % hóa đơn"".
+5. Nhập giá trị giảm giá = 105.",,,Hệ thống giới hạn giá trị nhập tối đa là 100 hoặc báo lỗi không cho phép lưu.,,Pass,,
+CTKM_40,Khai báo KM theo đơn hàng — giảm theo số tiền cố định,"Đã đăng nhập với vai trò Admin.
+","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo đơn hàng
+6. Chọn Theo số tiền số định
+7. Nhập số tiền: 50k.
+8. Không tích checkbox ""Tính trên giá trị sau KM khác"".
+9. Không tích checkbox ""Áp dụng quà tặng"".
+10. Nhấn Lưu",Cao,Phân loại KM – Theo đơn hàng,"Khai báo thành công và ghi nhận 1 bản ghi ngoài danh sách, cột Phân loại CTKM hiển thị Theo hóa đơn
+",,Pass,,
+CTKM_41,"KM theo đơn hàng — bật checkbox ""Tính trên giá trị đơn hàng sau khuyến mãi khác""","Đã đăng nhập với vai trò Admin.
+Đã có CTKM khác đang áp dụng cho cùng đơn.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo đơn hàng
+6. Chọn Theo %
+7. Nhập %: 5
+8. Tích checkbox ""Tính trên giá trị sau KM khác""
+9. Không tích checkbox ""Áp dụng quà tặng""
+10. Nhấn Lưu
+11. Kiểm tra giá trị giảm của CTKM này.",Cao,Phân loại KM – Theo đơn hàng,Lưu thành công. Hệ thống tính % giảm giá đơn hàng dựa trên tổng tiền sau khi trừ các KM dòng sản phẩm trước đó.,,Pass,,
+CTKM_42,"KM theo đơn hàng — bật ""Áp dụng quà tặng"" và khai báo quà",Đã đăng nhập với vai trò Admin.,"1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ít nhất 1 phạm vi áp dụng
+5. Chọn phân loại khuyến mại: Theo đơn hàng
+6. Chọn Theo số tiền số định
+7. Nhập số tiền: 50k.
+8. Tích checkbox ""Áp dụng quà tặng"".
+9. Quan sát phần khai báo quà tặng hiện ra.
+10. Thêm SP quà và combo vào danh sách.
+11. Nhấn ""Lưu"".",Trung bình,Phân loại KM – Theo đơn hàng,"- Sau khi tích: hiển thị thêm phần khai báo quà tặng (SP/combo).
+- Khai báo thành công.
+- Đơn hàng đủ điều kiện được nhận quà tặng đã cấu hình.",,Pass,,
+CTKM_43,Cấu hình tự động xác định nhóm KH realtime - TOÀN BỘ ĐƠN,"Đã đăng nhập với vai trò Admin.
+Đã chọn ""Đối tượng áp dụng""","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ""Đối tượng áp dụng""
+5. Chọn ít nhất 1 phạm vi áp dụng
+6. Chọn phân loại khuyến mại: Theo đơn hàng
+7. Chọn Theo số tiền số định
+8. Nhập số tiền: 50k.
+9. Check ""Hệ thống tự động xác định nhóm KH realtime"".
+10. Chọn Mức tính giảm giá = ""Tính trên toàn bộ giá trị đơn hàng"".
+11. Nhấn ""Lưu"".",,,Hệ thống lưu thành công. Khách hàng thăng hạng trong đơn hiện tại sẽ được áp KM trên toàn bộ đơn hàng.,,Pass,,
+CTKM_44,Cấu hình tự động xác định nhóm KH realtime - PHẦN VƯỢT NGƯỠNG,"Đã đăng nhập với vai trò Admin.
+Đã chọn ""Đối tượng áp dụng"" = Nhóm KH VIP.","1. Vào Menu > Khuyến mãi > Danh sách chương trình
+2. Nhấn ""Thêm mới chương trình""
+3. Khai báo các thông tin bắt buộc hợp lệ: Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Giờ bắt đầu, Giờ kết thúc
+4. Chọn ""Đối tượng áp dụng""
+5. Chọn ít nhất 1 phạm vi áp dụng
+6. Chọn phân loại khuyến mại: Theo đơn hàng
+7. Chọn Theo số tiền số định
+8. Nhập số tiền: 50k.
+9. Tích checkbox ""Hệ thống tự động xác định nhóm KH realtime"".
+10. Chọn Mức tính giảm giá = ""Chỉ tính trên phần giá trị vượt mốc điều kiện"".
+11. Nhấn ""Lưu"".",,,Hệ thống lưu thành công. Khách hàng chỉ được giảm giá cho phần tiền vượt ngưỡng thăng hạng VIP.,,Fail,,
+,Kiểm tra chức năng Xem danh sách và tìm kiếm CTKM,,,,,,,,,
+CTKM_45,Thống kê đúng số lượng CTKM theo từng trạng thái,"Hệ thống có CTKM ở các trạng thái: Đang diễn ra (3), Đã kết thúc (2), Chưa diễn ra (1).","1. Truy cập màn hình Quản lý CTKM.
+2. Quan sát phần thống kê.",Trung bình,Màn hình Quản lý CTKM,"- Hiển thị đúng: Đang diễn ra: 3, Đã kết thúc: 2, Chưa diễn ra: 1.
+- Số liệu thống kê cập nhật tự động khi trạng thái CTKM thay đổi.",,,,
+CTKM_46,Tìm kiếm CTKM theo mã chương trình,"Đã có CTKM mã ""CTKM2606100001"".","1. Nhập ""CTKM2606100001"" vào ô tìm kiếm.
+2. Quan sát kết quả.",Trung bình,Màn hình Quản lý CTKM,"- Chỉ hiển thị CTKM có mã khớp.
+- Tìm kiếm không phân biệt hoa/thường.",,,,
+CTKM_47,Lọc CTKM theo trạng thái,Hệ thống có CTKM ở nhiều trạng thái khác nhau.,"1. Chọn bộ lọc Trạng thái: ""Đang diễn ra"".
+2. Quan sát danh sách kết quả.",Trung bình,Màn hình Quản lý CTKM,"- Chỉ hiển thị các CTKM có trạng thái ""Đang diễn ra"".
+- Không hiển thị CTKM ở trạng thái khác.",,,,
+CTKM_48,Lọc CTKM theo khoảng thời gian,Hệ thống có nhiều CTKM với các khoảng thời gian khác nhau.,"1. Nhập khoảng thời gian lọc: 01/06/2026 – 30/06/2026.
+2. Quan sát kết quả.",Trung bình,Màn hình Quản lý CTKM,"- Hiển thị tất cả CTKM có ít nhất 1 đoạn thời gian hiệu lực nằm trong khoảng 01-30/06/2026.
+- CTKM hoàn toàn ngoài khoảng thời gian không hiển thị.",,,,
+CTKM_49,Lọc CTKM theo Loại khuyến mại,"Hệ thống có CTKM ở nhiều Loại khuyến mại khác nhau:
+- Đơn hàng
+- Sản phẩm
+- Danh mục","1. Chọn bộ lọc Loại khuyến mại: ""Đơn hàng""
+2. Quan sát danh sách kết quả",TB,Màn hình Quản lý CTKM,"Chỉ hiển thị các CTKM có Loại khuyến mại: ""Đơn hàng
+",Hiển thị full danh sách,Fail,Vũ Phạm,
+CTKM_50,Tìm kiếm không có kết quả,Không có CTKM nào khớp với từ khóa tìm kiếm.,"1. Nhập từ khóa: ""CTKM_KHONG_TON_TAI_XYZ"".
+2. Quan sát kết quả.",Thấp,Màn hình Quản lý CTKM,"- Hiển thị thông báo ""Không tìm thấy kết quả"" hoặc danh sách trống.
+- Không có lỗi hệ thống.",,,,
+,Kiểm tra chức năng Sửa CTKM,,,,,,,,,
+CTKM_51,Sửa CTKM chưa phát sinh giao dịch — sửa được toàn bộ,"CTKM chưa có giao dịch nào, trạng thái ""Chưa diễn ra"".","1. Nhấn nút sửa ở row CTKM cần chỉnh sửa.
+2. Cập nhật tên chương trình.
+3. Cập nhật ngày kết thúc.
+4. Cập nhật phần Phân loại khuyến mãi.
+5. Nhấn ""Xác nhận"".",Cao,Màn hình Cập nhật CTKM,"- Cho phép sửa tất cả trường bao gồm Phân loại khuyến mãi.
+- Lưu thành công, dữ liệu cập nhật đúng.
+- Hiển thị thông báo thành công.",,,,
+CTKM_52,Sửa CTKM đã phát sinh giao dịch — không sửa được Phân loại khuyến mãi,CTKM đã có ít nhất 1 giao dịch.,"1. Nhấn nút sửa ở row CTKM đã có giao dịch.
+2. Quan sát phần Phân loại khuyến mãi.
+3. Thử chỉnh sửa phần Phân loại khuyến mãi.",Cao,Màn hình Cập nhật CTKM,"- Phần ""Phân loại khuyến mãi"" hiển thị disabled/readonly.
+- Không thể thay đổi phân loại khuyến mãi.
+- Vẫn sửa được các thông tin khác (tên, mô tả, thời gian, phạm vi).",,,,
+CTKM_53,Exception: Sửa CTKM — đổi tên trùng với CTKM đã tồn tại,"CTKM ""Khuyến mãi tháng 7"" đã tồn tại.","1. Mở màn hình sửa một CTKM khác.
+2. Đổi tên thành ""Khuyến mãi tháng 7"".
+3. Nhấn ""Xác nhận"".",Cao,Màn hình Cập nhật CTKM,"- Hệ thống hiển thị lỗi: tên chương trình đã tồn tại.
+- Không lưu được thay đổi.",,,,
+,Kiểm tra chức năng Dừng / Tiếp tục / Bắt đầu CTKM — Chuyển trạng thái,,,,,,,,,
+CTKM_54,Dừng CTKM đang diễn ra thành công,"CTKM ở trạng thái ""Đang diễn ra"".","1. Nhấn nút Dừng trên row CTKM đang diễn ra.
+2. Hệ thống hiển thị popup xác nhận.
+3. Nhấn ""Xác nhận"".",Cao,Màn hình Quản lý CTKM,"- Popup xác nhận hiển thị đúng nội dung.
+- Sau xác nhận: trạng thái chuyển ""Đang diễn ra"" → ""Đã kết thúc"".
+- Trường Ngày kết thúc được để trống (nếu trước đó có cài).
+- Thống kê số liệu cập nhật chính xác.",,,,
+CTKM_55,"Nút Dừng chỉ hiển thị với CTKM ""Đang diễn ra""",Hệ thống có CTKM ở các trạng thái khác nhau.,"1. Quan sát danh sách CTKM.
+2. Kiểm tra nút Dừng ở các CTKM trạng thái: Lưu nháp, Chưa diễn ra, Đã kết thúc.",Cao,Màn hình Quản lý CTKM,"- Nút Dừng KHÔNG hiển thị với các CTKM trạng thái Lưu nháp / Chưa diễn ra / Đã kết thúc.
+- Chỉ hiển thị với CTKM ""Đang diễn ra"".",,,,
+CTKM_56,Dừng CTKM — nhấn Hủy ở popup → trạng thái không đổi,"CTKM ở trạng thái ""Đang diễn ra"".","1. Nhấn nút Dừng.
+2. Popup xác nhận xuất hiện.
+3. Nhấn ""Hủy"" (không xác nhận).",Trung bình,Màn hình Quản lý CTKM,"- Popup đóng lại.
+- Trạng thái CTKM vẫn là ""Đang diễn ra"", không thay đổi.",,,,
+CTKM_57,Tiếp tục CTKM đã kết thúc — không nhập ngày kết thúc mới,"CTKM ở trạng thái ""Đã kết thúc"".","1. Nhấn nút Tiếp tục trên row CTKM đã kết thúc.
+2. Popup xuất hiện, bỏ trống ngày kết thúc.
+3. Nhấn ""Xác nhận"".",Cao,Màn hình Quản lý CTKM,"- Trạng thái chuyển ""Đã kết thúc"" → ""Đang diễn ra"".
+- Ngày kết thúc để trống (CTKM chạy vô thời hạn đến khi dừng thủ công).",,,,
+CTKM_58,Tiếp tục CTKM đã kết thúc — nhập ngày kết thúc mới,"CTKM ở trạng thái ""Đã kết thúc"".","1. Nhấn nút Tiếp tục.
+2. Popup xuất hiện, nhập ngày kết thúc mới: 31/12/2026.
+3. Nhấn ""Xác nhận"".",Cao,Màn hình Quản lý CTKM,"- Trạng thái chuyển → ""Đang diễn ra"".
+- Ngày kết thúc cập nhật thành 31/12/2026.",,,,
+CTKM_59,"Nút Tiếp tục chỉ hiển thị với CTKM ""Đã kết thúc""",Hệ thống có CTKM ở các trạng thái khác nhau.,"1. Quan sát danh sách CTKM.
+2. Kiểm tra nút Tiếp tục ở các CTKM trạng thái: Lưu nháp, Chưa diễn ra, Đang diễn ra.",Cao,Màn hình Quản lý CTKM,"- Nút Tiếp tục KHÔNG hiển thị với trạng thái Lưu nháp / Chưa diễn ra / Đang diễn ra.
+- Chỉ hiển thị với CTKM ""Đã kết thúc"".",,,,
+CTKM_60,Bắt đầu CTKM sắp diễn ra thủ công,"CTKM ở trạng thái ""Chưa diễn ra"" (Sắp diễn ra).","1. Nhấn nút Bắt đầu trên row CTKM.
+2. Popup xác nhận xuất hiện.
+3. Nhấn ""Xác nhận"".",Cao,Màn hình Quản lý CTKM,"- Popup xác nhận hiển thị đúng nội dung.
+- Sau xác nhận: trạng thái chuyển ""Chưa diễn ra"" → ""Đang diễn ra"".
+- Ngày kết thúc cập nhật nếu có khai báo.",,,,
+CTKM_61,Chuyển trạng thái tự động khi đến ngày bắt đầu,"CTKM ở trạng thái ""Chưa diễn ra"", ngày bắt đầu = ngày hôm nay.","1. Tạo CTKM với ngày bắt đầu = ngày hôm nay.
+2. Chờ đến thời điểm ngày bắt đầu.
+3. Kiểm tra trạng thái CTKM.",Cao,Hệ thống / Scheduler,"- Hệ thống tự động chuyển trạng thái ""Chưa diễn ra"" → ""Đang diễn ra"" khi đến ngày bắt đầu.
+- Không cần thao tác thủ công.",,,,
+CTKM_62,Chuyển trạng thái tự động khi đến ngày kết thúc,"CTKM đang diễn ra, ngày kết thúc = ngày hôm nay.","1. Tạo CTKM với ngày kết thúc = ngày hôm nay.
+2. Chờ qua thời điểm kết thúc.
+3. Kiểm tra trạng thái.",Cao,Hệ thống / Scheduler,"- Hệ thống tự động chuyển trạng thái ""Đang diễn ra"" → ""Đã kết thúc"" khi hết ngày kết thúc.
+- Không cần thao tác thủ công.",,,,
+,Kiểm tra chức năng Quản lý Danh sách điều kiện,,,,,,,,,
+CTKM_63,Thêm điều kiện — điều kiện giá trị tối thiểu tổng đơn hàng,Đang ở màn hình Danh sách điều kiện.,"1. Nhấn ""Thêm điều kiện"".
+2. Chọn ""Điều kiện giá trị đơn hàng"": ""Giá trị tối thiểu của tổng đơn hàng"".
+3. Điền giá trị: 100.000.
+4. Chọn ""Điều kiện SP ràng buộc"": ""Không yêu cầu"".
+5. Nhấn ""Xác nhận"".",Cao,Danh sách điều kiện,"- Điều kiện được thêm thành công.
+- Hiển thị trong danh sách: ""Đơn hàng tối thiểu 100.000đ"".",,,,
+CTKM_64,Thêm điều kiện — yêu cầu SP ràng buộc cụ thể với số lượng,Đang ở popup Thêm mới điều kiện.,"1. Chọn ""Điều kiện giá trị"": ""Không yêu cầu"".
+2. Chọn ""Điều kiện SP ràng buộc"": ""Cần có các sản phẩm với số lượng được cài đặt"".
+3. Thêm SP A SL=2, dịch vụ B SL=3.
+4. Nhấn ""Xác nhận"".",Cao,Danh sách điều kiện,"- Điều kiện thêm thành công.
+- Hiển thị: cần có SP A×2, dịch vụ B×3 trong đơn.",,,,
+CTKM_65,Thêm điều kiện — kết hợp giá trị tổng đơn VÀ SP ràng buộc,Đang ở popup Thêm mới điều kiện.,"1. Chọn ""Giá trị tối thiểu của tổng đơn hàng"" = 100.000.
+2. Chọn ""Cần có SP ràng buộc"", thêm SP A×2, dịch vụ B×3.
+3. Nhấn ""Xác nhận"".",Cao,Danh sách điều kiện,"- Điều kiện thêm thành công với cả 2 điều kiện kết hợp:
+  + Tổng đơn ≥ 100.000đ
+  + Có SP A×2 và dịch vụ B×3 trong đơn.",,,,
+CTKM_66,Thêm điều kiện — giá trị tối thiểu các SP được cài đặt,Đang ở popup Thêm mới điều kiện.,"1. Chọn ""Giá trị tối thiểu của tổng số tiền các SP được cài đặt"".
+2. Điền giá trị: 100.000.
+3. Thêm SP A và dịch vụ B.
+4. Nhấn ""Xác nhận"".",Trung bình,Danh sách điều kiện,"- Điều kiện thêm thành công.
+- Logic: đơn hàng đạt KM khi tổng tiền riêng SP A + dịch vụ B ≥ 100.000đ (chỉ cần 1 trong 2 đạt đủ).",,,,
+CTKM_67,Tìm kiếm điều kiện theo tên,Đã có nhiều điều kiện trong danh sách.,"1. Nhập tên điều kiện vào ô tìm kiếm.
+2. Quan sát kết quả.",Thấp,Danh sách điều kiện,"- Hiển thị đúng các điều kiện khớp tên tìm kiếm.
+- Không phân biệt hoa/thường.",,,,
+CTKM_68,Xóa điều kiện — điều kiện chưa được gán vào CTKM nào,"Điều kiện ""DC001"" chưa gán vào CTKM.","1. Nhấn nút Xóa tại điều kiện ""DC001"".
+2. Xác nhận xóa.",Trung bình,Danh sách điều kiện,"- Điều kiện bị xóa khỏi danh sách.
+- Không còn xuất hiện sau khi tìm kiếm.",,,,
+CTKM_69,Exception: Xóa điều kiện đang được gán vào CTKM,"Điều kiện ""DC002"" đang được gán vào CTKM ""Khuyến mãi hè"".","1. Nhấn nút Xóa tại điều kiện ""DC002"".
+2. Quan sát phản hồi.",Cao,Danh sách điều kiện,"- Hệ thống hiển thị thông báo lỗi: không thể xóa điều kiện đang được sử dụng.
+- Điều kiện không bị xóa.",,,,
+,Kiểm tra chức năng Quản lý Danh sách đối tượng,,,,,,,,,
+CTKM_70,Thêm nhóm đối tượng — Khách mới,Đang ở màn hình Danh sách nhóm đối tượng.,"1. Nhấn ""Thêm nhóm đối tượng"".
+2. Nhập tên nhóm: ""Khách hàng mới tháng 6"".
+3. Chọn loại: ""Khách mới"".
+4. Nhấn ""Xác nhận"".",Cao,Danh sách đối tượng,"- Nhóm đối tượng được thêm thành công.
+- Áp dụng cho khách được thêm mới trong ngày và chưa phát sinh đơn hàng.",,,,
+CTKM_71,Thêm nhóm đối tượng — Khách hàng cũ với điều kiện nhân khẩu và sinh nhật,Đang ở popup Thêm nhóm đối tượng.,"1. Chọn loại ""Khách hàng cũ"".
+2. Cấu hình điều kiện nhân khẩu: Độ tuổi 18–35, Giới tính Nữ.
+3. Cấu hình điều kiện sinh nhật: ""Trong tháng"".
+4. Nhập tên nhóm.
+5. Nhấn ""Xác nhận"".",Cao,Danh sách đối tượng,"- Nhóm được thêm thành công với các điều kiện đã cấu hình.
+- Hiển thị đúng thông tin điều kiện trong danh sách.",,,,
+CTKM_72,Thêm nhóm đối tượng — Khách hàng tùy chỉnh (chọn KH cụ thể),Đã có dữ liệu khách hàng trong hệ thống.,"1. Chọn loại ""Khách hàng tùy chỉnh"".
+2. Tìm kiếm và chọn các khách hàng cụ thể.
+3. Nhập tên nhóm.
+4. Nhấn ""Xác nhận"".",Trung bình,Danh sách đối tượng,"- Nhóm được tạo với danh sách KH được chọn.
+- CTKM chỉ áp dụng cho đúng các KH trong danh sách.",,,,
+CTKM_73,Thêm nhóm đối tượng — Nhóm KH với điều kiện tổng bán và số lần mua,"Đang ở popup Thêm nhóm đối tượng, chọn loại Nhóm khách hàng.","1. Chọn loại ""Nhóm khách hàng"".
+2. Thêm điều kiện: Tổng bán ≥ 5.000.000đ.
+3. Thêm điều kiện: Số lần mua ≥ 10.
+4. Chọn ""Thêm KH theo điều kiện"".
+5. Tích checkbox ""Hệ thống thực hiện tự động"".
+6. Nhấn ""Xác nhận"".",Trung bình,Danh sách đối tượng,"- Nhóm được tạo thành công.
+- Hệ thống tự động thêm/loại KH khỏi nhóm khi điều kiện thay đổi.",,,,
+CTKM_74,Tìm kiếm nhóm đối tượng theo tên,Danh sách đối tượng có nhiều nhóm.,"1. Nhập tên nhóm vào ô tìm kiếm.
+2. Quan sát kết quả.",Thấp,Danh sách đối tượng,"- Hiển thị đúng các nhóm khớp tên.
+- Không phân biệt hoa/thường.",,,,
+CTKM_75,Xóa nhóm đối tượng chưa gán vào CTKM,"Nhóm ""DT001"" chưa gán vào CTKM.","1. Nhấn nút Xóa tại nhóm ""DT001"".
+2. Xác nhận xóa.",Trung bình,Danh sách đối tượng,- Nhóm bị xóa thành công khỏi danh sách.,,,,
+CTKM_76,Exception: Xóa nhóm đối tượng đang được gán vào CTKM,"Nhóm ""DT002"" đang được gán vào CTKM ""Khuyến mãi hè"".","1. Nhấn nút Xóa tại nhóm ""DT002"".
+2. Quan sát phản hồi.",Cao,Danh sách đối tượng,"- Hệ thống hiển thị thông báo lỗi: không thể xóa nhóm đang được sử dụng.
+- Nhóm không bị xóa.",,,,
