@@ -51,7 +51,7 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
     await page.getByText("Theo sản phẩm").click();
     await page.waitForTimeout(500);
 
-    // Cấu hình Điều kiện 1: Mua từ 2 -> Chọn loại "Sản phẩm" -> Chọn SP 1 -> Giảm 10,000
+    // Cấu hình Điều kiện 1: Mua từ 2 -> Chọn loại "Sản phẩm" -> Click ô input bên cạnh -> Chọn SP
     await page.locator(".ant-input-number-input").nth(0).fill("2");
     await page.locator(".ant-select").nth(3).click();
     await page
@@ -59,8 +59,10 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
       .filter({ hasText: /^Sản phẩm$/i })
       .first()
       .click();
-    await page.locator(".ant-select").nth(4).click();
-    await page.locator(".ant-select-item-option:visible").first().click();
+
+    await page.getByPlaceholder("Tìm và chọn sản phẩm").first().click();
+    await page.waitForTimeout(500);
+    await page.getByText(/SKU/i).last().click();
     await page.locator(".ant-input-number-input").nth(1).fill("10000");
 
     // Click Thêm điều kiện khuyến mãi
@@ -75,8 +77,10 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
       .filter({ hasText: /^Sản phẩm$/i })
       .first()
       .click();
-    await page.locator(".ant-select").nth(6).click();
-    await page.locator(".ant-select-item-option:visible").first().click();
+
+    await page.getByPlaceholder("Tìm và chọn sản phẩm").last().click();
+    await page.waitForTimeout(500);
+    await page.getByText(/SKU/i).last().click();
     await page.locator(".ant-input-number-input").nth(3).fill("10000");
 
     // Chọn Phạm vi áp dụng

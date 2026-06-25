@@ -51,7 +51,7 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
     await page.getByText("Theo sản phẩm").click();
     await page.waitForTimeout(500);
 
-    // Cấu hình Điều kiện 1: Mua từ 5 -> Chọn loại "Sản phẩm" -> Chọn SP 1 -> Giảm 10,000đ
+    // Cấu hình Điều kiện 1: Mua từ 5 -> Chọn loại "Sản phẩm" -> Click ô Tìm -> Chọn SP -> Giảm 10,000đ
     await page.locator(".ant-input-number-input").nth(0).fill("5");
     await page.locator(".ant-select").nth(3).click();
     await page
@@ -59,15 +59,17 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
       .filter({ hasText: /^Sản phẩm$/i })
       .first()
       .click();
-    await page.locator(".ant-select").nth(4).click();
-    await page.locator(".ant-select-item-option:visible").first().click();
+
+    await page.getByPlaceholder(/Tìm và chọn/i).first().click();
+    await page.waitForTimeout(500);
+    await page.getByText(/SKU/i).last().click();
     await page.locator(".ant-input-number-input").nth(1).fill("10000");
 
     // Click Thêm điều kiện khuyến mãi
     await page.getByText("Thêm điều kiện khuyến mãi").click();
     await page.waitForTimeout(500);
 
-    // Cấu hình Điều kiện 2 bậc thang: Mua từ 10 -> Chọn loại "Sản phẩm" -> Chọn SP 1 -> Giảm 25,000đ
+    // Cấu hình Điều kiện 2 bậc thang: Mua từ 10 -> Chọn loại "Sản phẩm" -> Click ô Tìm -> Chọn SP -> Giảm 25,000đ
     await page.locator(".ant-input-number-input").nth(2).fill("10");
     await page.locator(".ant-select").nth(5).click();
     await page
@@ -75,8 +77,10 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
       .filter({ hasText: /^Sản phẩm$/i })
       .first()
       .click();
-    await page.locator(".ant-select").nth(6).click();
-    await page.locator(".ant-select-item-option:visible").first().click();
+
+    await page.getByPlaceholder(/Tìm và chọn/i).last().click();
+    await page.waitForTimeout(500);
+    await page.getByText(/SKU/i).last().click();
     await page.locator(".ant-input-number-input").nth(3).fill("25000");
 
     // Chọn Phạm vi áp dụng
