@@ -102,8 +102,8 @@ test.describe("Kiểm tra chức năng Tạo CTKM", () => {
 
     // Verify in list
     // Chờ bảng load xong dữ liệu
-    await page.waitForSelector('.ant-table-row', { timeout: 10000 });
-    const firstRow = page.locator('.ant-table-row').first();
+    await page.waitForSelector(".ant-table-row", { timeout: 10000 });
+    const firstRow = page.locator(".ant-table-row").first();
     await expect(firstRow).toContainText(ctkmName);
     await expect(firstRow).toContainText("Đang diễn ra");
   });
